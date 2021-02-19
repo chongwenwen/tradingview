@@ -1,0 +1,602 @@
+ .quotation_container{
+       width: 100%;
+       overflow: hidden;
+       .main_container{
+          max-width:1800px;
+          min-width:1200px;
+          margin:10px auto;
+          overflow: hidden;
+          .left{
+             width: 22%;
+             height: 100%;
+             float:left;
+             .quotation_list{
+                  width: 100%;
+                  height:580px;
+                  background-color: #fff;
+                 .search_box{
+                     width: 100%;
+                     padding:20px 20px 0;
+                     position:relative;
+                     overflow: hidden;
+                      input{
+                        width: 100%;
+                        height: 30px;
+                        border:1px solid #ccc;
+                        padding: 0 10px;
+                        font-size:14px;
+                      }
+                      >i{
+                         position:absolute;
+                         top:27px;
+                         right:30px;
+                      }
+                      .switch{
+                         width: 100%;
+                         height: 20px;
+                         margin: 16px 0;
+                         position: relative;
+                         .el-radio-group{
+                            height: 100%;
+                            float:left;
+                            padding-top:2px;
+                            span{
+                               font-size:12px;
+                            }
+                            .el-radio__label{
+                               padding-left:4px;
+                            }
+                            .el-radio__inner{
+                              width: 12px;
+                              height: 12px;
+                            }
+                         }
+                         .el-checkbox-group{
+                            float:right;
+                            margin-right:20px;
+                            .el-checkbox{
+                              overflow: hidden;
+                              .el-checkbox__label{
+                                padding-left:4px;
+                              }
+                              .el-checkbox__inner{
+                                width: 12px;
+                                height: 12px;
+                                margin-top: 2px;
+                              }
+                              .el-checkbox__inner::after{
+                                left:3px;
+                                top:0;
+                              }
+                              span{
+                                 margin-bottom: 1px;
+                                 font-size:12px;
+                              }
+                            }
+                         }
+                         i{
+                            width: 13px;
+                            height: 13px;
+                            font-size:13px;
+                            position:absolute;
+                            bottom:6px;
+                            right:4px;
+                            color:#52cbca;
+                          }
+                     }
+                  }
+                  .el-table{
+                    width: 100%;
+                    height: 478px;
+                    .el-table__body-wrapper{
+                       height: 438px;
+                       overflow-y: auto;
+                    }
+                  }
+              }
+             .latest_deal{
+                width: 100%;
+                height: 820px;
+                background-color: #fff;
+                margin-top: 20px;
+                display: flex;
+                flex-flow:column;
+                h1{
+                  width: 100%;
+                  font-size: 16px;
+                  height: 40px;
+                  line-height: 40px;
+                  padding-left: 20px;
+                  text-align: left;
+                  color: #27313e;
+                }
+                .el-tabs{
+                  flex:1;
+                  display: flex;
+                  flex-flow:column;
+                  .el-tabs__content{
+                      flex:1;
+                      overflow-y: auto;
+                  }
+                }
+              }
+          }
+          .right{
+            height: 100%;
+            width: 77%;
+            float:right;
+            .totalData{
+               width: 100%;
+               height: 60px;
+               padding:0 30px;
+               background-color: #fff;
+               display: flex;
+               .price_section{
+                  line-height: 60px;
+                  overflow: hidden;
+                  h1{
+                    display: inline-block;
+                    font-weight: 700;
+                    color:#192330;
+                  }
+                  span{
+                    font-size:14px;
+                    margin-left:10px;
+                  }
+                  span:first-of-type{
+                    padding:0 20px 0 30px;
+                  }
+               }
+               .ticker_section{
+                  flex:1;
+                  li{
+                     width:20%;
+                     height: 100%;
+                     float:left;
+                     font-size:14px;
+                     position:relative;
+                     .item{
+                        width: 100%;
+                        position:absolute;
+                        top:50%;
+                        left:50%;
+                        transform:translate(-50%,-50%);
+                         span{
+                            color:#898989;
+                            font-size:12px;
+                         }
+                         p{
+                            color:#192330;
+                            margin-top: 6px;
+                         }
+                     }
+                     &:last-of-type{
+                       width:40%;
+                     }
+                     &:first-of-type{
+                       .item{
+                         p{
+                           color:#e45555
+                         }
+                       }
+                     }
+                  }
+               }
+            }
+            .content{
+              width: 100%;
+              height: 760px;
+              margin-top: 10px;
+              .middle{
+                 width: 68%;
+                 height: 100%;
+                 float:left;
+                 .kline{
+                   width: 100%;
+                   height: 360px;  
+                   background-color: #fff;               
+                 }
+                 .trade_section{
+                   width: 100%;
+                   height: 390px;  
+                   background-color: #fff;
+                   margin-top: 10px;
+                   position:relative;
+                   .modal{
+                      width: 100%;
+                      height: 100%;
+                      background-color: rgba(0,0,0,0.5);
+                      position:absolute;
+                      top:0;
+                      left:0;
+                      z-index:3;
+                      h1{
+                         width: 100%;
+                         height: 50px;
+                         position:absolute;
+                         top:45%;
+                         color:#ddd;
+                         font-size:26px;
+                         a{
+                           &:hover{
+                             text-decoration: underline;
+                           }
+                         }
+                         .login{
+                           color:#22e6b8;
+                         }
+                         .register{
+                           color:orange;
+                         }
+                      }
+                   }
+                   .title{
+                      width: 100%;
+                      height: 56px;
+                      line-height: 46px;
+                      text-align:left;
+                      font-size:12px;
+                      padding-left: 26px;
+                      >img{
+                        width: 16px;
+                        height: 16px;
+                        vertical-align: middle;
+                        margin-bottom: 6px;
+                      }
+                      .el-checkbox-group{
+                        height: 100%;
+                        overflow: hidden;
+                        img{
+                          margin-bottom: 14px;
+                          vertical-align: middle;
+                        }
+                      }
+                   }
+                   .entrust_content{
+                     width: 100%;
+                     padding:0 20px;
+                     overflow: hidden;
+                     .tab{
+                       border-bottom:1px solid #52cbca;
+                       height: 40px;
+                       line-height: 40px;
+                       margin-bottom: 14px;
+                       span{
+                         display: inline-block;
+                         height: 100%;
+                         padding:0 40px;
+                         line-height:40px;
+                         background-image: linear-gradient(270deg,#22e6b8,#00c1ce);
+                         color:#fff;
+                       }
+                     }
+                     .recharge{
+                       width: 100%;
+                       height: 24px;
+                       .ft,.gt{
+                         width: 47%;
+                         height: 100%;
+                         line-height: 24px;
+                         font-size:14px;
+                         text-align: left;
+                         font-weight: 700;
+                         color:#888;
+                       }
+                       .ft{
+                         margin-right: 3%;
+                       }
+                       .gt{
+                         margin-left: 3%;
+                       }
+                     }
+                     .el-form {
+                       width: 47%;
+                       overflow: hidden;
+                       float:left;
+                       .title{
+                          width: 100%;
+                          padding: 34px 0 30px;
+                          color:#666;
+                          font-size:14px;
+                       }
+                       .el-form-item{
+                         background-color: #f9f9f9;
+                         margin:22px 0;
+                         border:1px solid #eee;
+                         .el-form-item__content{
+                            position:relative;
+                            >span{
+                             display: inline-block;
+                             height: 100%;
+                             position:absolute;
+                             left:-16px;
+                             top:0;
+                             color:#888;
+                           }
+                         }
+                         &:hover{
+                            border-color:#22e6b8;
+                         }
+                         .el-form-item__label{
+                            text-align: center;
+                         }
+                         .el-input__inner{
+                           padding: 0 0 0 30px;
+                           border:none;
+                           background-color: transparent;
+                         }
+                         .el-form-item__error{
+                           left:-80px;
+                         }
+                       }
+                       .tip{
+                          text-align: left;
+                          font-size:12px;
+                          line-height: 16px;
+                          margin:10px 0;
+                          span{
+                            float:right;
+                            font-size:12px;
+                            i{
+                              font-style:normal;
+                            }
+                            s{
+                              text-decoration: none;
+                            }
+                          }
+                       }
+                       .buyBtn,.sellBtn{
+                           border:0;
+                           outline:0;
+                           width: 100%;
+                           font-size:20px;
+                           font-weight: 700;
+                           height: 38px;
+                           background-color: #00b275;
+                           border-radius: 48px;
+                           margin-top: 18px;
+                        }
+                        .sellBtn{
+                          background-color: #e45555;
+                        }
+                     }
+                     .sell{
+                        float:right;
+                     }
+                     .entrust{
+                        .el-form-item{
+                           margin:15px 0;
+                        }
+                     }
+                   }
+                 }
+              }
+              .right{
+                 width: 31%;
+                 height: 100%;
+                 float:right;
+                 background-color: #fff;
+                 display: flex;
+                 flex-flow:column;
+                 .option{
+                    width: 100%;
+                    height: 50px;
+                    line-height: 50px;
+                    padding:0 20px;
+                    .el-input__icon{
+                      line-height: 25px;
+                    }
+                    .gt{
+                      a{
+                        display: inline-block;
+                        width: 22px;
+                        height: 20px;
+                        border:1px solid #ddd;
+                        margin-left: 4px;
+                        line-height: 20px;
+                        border-radius: 2px;
+                        i{
+                          color:orange;
+                        }
+                        .up{
+                          color:red;
+                        }
+                        .down{
+                          color:#00b275;
+                        }
+                        img{
+                          width: 12px;
+                          height: 12px;
+                        }
+                      }
+                    }
+                 }
+                 .data{
+                   flex:1;
+                   display:flex;
+                   flex-flow:column;
+                    .depthTitle{
+                      width: 100%;
+                      height: 31px;
+                      line-height: 31px;
+                      background-color: #f9f9f9;
+                      border-bottom: 1px solid #e9ecef;
+                      display: flex;
+                      .item{
+                        flex:1;
+                        font-size:12px;
+                      }
+                    }
+                    .currentData{
+                       width: 100%;
+                       height: 61px;
+                       line-height: 61px;
+                       font-size:20px;
+                       border-bottom:1px solid #ebeef5;
+                       border-top:1px solid #ebeef5;
+                       span{
+                         color:#666;
+                         font-size:13px;
+                       }
+                       .newPriceUp,.newPriceDown{
+                         display: inline;
+                       }
+                       img{
+                         width: 16px;
+                         height: 22px;
+                         margin-bottom:-3px;
+                       }
+                       .newPriceUp{
+                         color:#e45555;
+                       }
+                       .newPriceDown{
+                         color:#00b66f;
+                       }
+                    }
+                    .depthSell,.depthBuy{
+                       .item_list{
+                          width: 100%;
+                          height: 31px;
+                          line-height: 31px;
+                          border-bottom: 1px solid #e9ecef;
+                          display: flex;
+                          position:relative;
+                          .down_item{
+                            flex:1;
+                            font-size:12px;
+                            color:#6f6f6f;
+                          }
+                          .percent{
+                            height: 100%;
+                            background-color: rgba(0,178,117,0.2);
+                            position:absolute;
+                            top:0;
+                            right:0;
+                          }
+                          &:hover{
+                            background-color: #f8f8f8;
+                            cursor: pointer;
+                          }
+                       }
+                    }
+                    .depthBuy{
+                       .item_list{
+                         .percent{
+                           background-color: rgba(227,85,85,0.2);
+                         }
+                       }
+                    }
+                    .both{
+                       flex:1;
+                       display:flex;
+                       flex-flow:column;
+                       .depthSell,.depthBuy{
+                          width: 100%;
+                          height: 309px;
+                          overflow: hidden;
+                       }
+                    }
+                    .onlySell,.onlyBuy{
+                      flex:1;
+                      display:flex;
+                      flex-flow:column;
+                      .depthSell{
+                        flex:1;
+                        overflow-y: auto;
+                      }
+                      .depthBuy{
+                        flex:1;
+                        overflow-y: auto;
+                      }
+                    }
+                    .onlyUp {
+                       position:relative;
+                       padding-bottom:60px;
+                       .currentData{
+                         position:absolute;
+                         left:0;
+                         bottom:0;
+                       }
+                    }
+                 }
+              }
+            }
+            .entrust_list{
+              width: 100%;
+              margin-top: 10px;
+              overflow-y: auto;
+              p{
+                height: 20px;
+                line-height: 20px;
+                font-size:14px;
+                text-align: left;
+                margin-top: 10px;
+                i{
+                  color:#f56c6c;
+                }
+              }
+              .item{
+                  width: 100%;
+                  height: 276px;
+                  display: flex;
+                  flex-flow:column;
+                  &:first-of-type{
+                    margin-bottom: 10px;
+                  }
+                 .title{
+                   width: 100%;
+                   height: 40px;
+                   line-height: 40px;
+                   text-align: left;
+                   padding:0 20px;
+                   border-bottom: 1px solid rgb(82, 203, 202);
+                   overflow: hidden;
+                   span{
+                     float:left;
+                     height: 30px;
+                     line-height:30px;
+                     padding:0 10px;
+                     margin-top: 10px;
+                     background-image: linear-gradient(270deg,#22e6b8,#00c1ce);
+                     color:#fff;
+                   }
+                   .more{
+                     font-size:14px;
+                     float:right;
+                     color:#27313e;
+                     background: transparent;
+                     cursor: pointer;
+                     &:hover{
+                       color:#00c1ce;
+                       text-decoration: underline;
+                     }
+                   }
+                 }
+                 .el-table{
+                    flex:1;
+                    display: flex;
+                    flex-flow:column;
+                    th{
+                       padding:6px 0;
+                    }
+                   .el-table__body-wrapper{
+                     flex:1;
+                     overflow-y: auto;
+                     .option{
+                        color: #2693FF;
+                        cursor: pointer;
+                        &:hover{
+                          text-decoration: underline;
+                        }
+                     }
+                   }
+                 }
+              }
+            }
+          }
+       }
+    }
+    .el-tooltip__popper{
+       width: 300px;
+       line-height: 20px;
+    }
